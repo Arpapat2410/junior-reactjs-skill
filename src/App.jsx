@@ -62,7 +62,7 @@ function App() {
 
 
   return (
-    <div className="max-w-5xl p-6 bg-white border border-gray-200 rounded-lg shadow-md dark:border-gray-700 m-auto ">
+    <div className="max-w-4xl p-6 bg-white border border-gray-200 rounded-lg shadow-md dark:border-gray-700 m-auto ">
       <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2'>
         <div>
           {loading ? 
