@@ -66,18 +66,18 @@ function App() {
       <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2'>
         <div>
           {loading ? 
-            <ReactLoading type='spin' color='black' height={'20%'} width={'20%'} />
-    :
+            <ReactLoading className="" type='spin' color='black' height={'20%'} width={'20%'} />
+              :
             <>
-              <div className='text-4xl textarea-bordered' >{poke?.name}</div>
-              <button  className="mt-5 btn btn-outline btn-primary hover:text-white" onClick={addFav}>Add to Favourite</button>
+              <div className='text-4xl textarea-bordered mt-3' >{poke?.name}</div>
+              <button  className="mt-5 btn btn-outline btn-info hover:text-white" onClick={addFav}>Add to Favourite</button>
               <img src={poke?.sprites?.other?.home.front_default} alt={poke?.name} />
               <ul className='my-4'>
                 {poke?.abilities?.map((abil, idx) => (
                   <li className='mt-2' key={idx} >{abil.ability.name}</li>
                 ))}
               </ul>
-              <div className='mt-6flex justify-center'>
+              <div className='mt-6 flex justify-center'>
                 <button className='btn mr-5 px-5' onClick={prevPoke}>Previous</button>
                 <button className='btn  px-9' onClick={nextPoke}>Next</button>
               </div>
@@ -86,7 +86,7 @@ function App() {
         </div>
 
         <div className=''>
-          <div className='text-3xl '>Your favourite pokemon</div>
+          <div className='text-3xl mt-3'>Your favourite pokemon</div>
           {fav.length > 0 ? <FavPoke fav={fav} /> : <div className='flex h-full justify-center items-center'><p>No favourite pokemon</p></div>}
         </div>
       </div>
